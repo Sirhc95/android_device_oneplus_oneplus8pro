@@ -1,5 +1,4 @@
-#
-# Copyright (C) 2020 The Paranoid Android Project
+# Copyright (C) 2020 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,18 +11,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
-# Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/oneplus/oneplus8pro/oneplus8pro-vendor.mk)
+LOCAL_PATH := $(call my-dir)
 
-# Overlays
-PRODUCT_PACKAGES += \
-    Oneplus8ProFrameworksRes
-
-# Screen density
-PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-
-# Inherit from sm8150-common
-$(call inherit-product, device/oneplus/sm8250-common/sm8250.mk)
+include $(call all-makefiles-under,$(LOCAL_PATH))
