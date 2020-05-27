@@ -88,7 +88,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_STATIC_BOOT_CONTROL_HAL := \
     bootctrl.kona \
     libcutils \
-    libgptutils \
+    librecovery_updater_msm \
     libz \
 
 PRODUCT_PACKAGES_DEBUG += \
