@@ -25,5 +25,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
-# Inherit from sm8150-common
-$(call inherit-product, device/oneplus/sm8250-common/sm8250.mk)
+# AID/fs configs
+PRODUCT_PACKAGES += \
+    fs_config_files
+
+# Common init scripts
+PRODUCT_PACKAGES += \
+    init.qcom.rc \
+    init.qcom.post_boot.sh
