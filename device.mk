@@ -19,7 +19,8 @@ $(call inherit-product-if-exists, vendor/oneplus/oneplus8pro/oneplus8pro-vendor.
 
 # Overlays
 PRODUCT_PACKAGES += \
-    Oneplus8ProFrameworksRes
+    Oneplus8ProFrameworksRes \
+    Oneplus8ProSystemUI
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
