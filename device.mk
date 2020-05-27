@@ -98,6 +98,18 @@ PRODUCT_STATIC_BOOT_CONTROL_HAL := \
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
+# NFC
+PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.0 \
+    android.hardware.nfc@1.1 \
+    android.hardware.nfc@1.2 \
+    android.hardware.secure_element@1.0 \
+    android.hardware.secure_element@1.1 \
+    com.android.nfc_extras \
+    Tag \
+    vendor.nxp.nxpese@1.0 \
+    vendor.nxp.nxpnfc@1.0
+
 # NN
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-rtti
