@@ -19,6 +19,7 @@ $(call inherit-product-if-exists, vendor/oneplus/oneplus8pro/oneplus8pro-vendor.
 
 # Overlays
 PRODUCT_PACKAGES += \
+    Oneplus8ProCarrierConfig \
     Oneplus8ProFrameworksRes \
     Oneplus8ProSystemUI
 
