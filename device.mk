@@ -75,3 +75,8 @@ PRODUCT_STATIC_BOOT_CONTROL_HAL := \
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
+
+# Input
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/idc/gf_input.idc:system/usr/idc/gf_input.idc \
+    $(LOCAL_PATH)/keylayout/gf_input.kl:system/usr/keylayout/gf_input.kl
