@@ -59,10 +59,20 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+    libbluetooth_qti \
+    libbt-logClient.so
+
 # Common init scripts
 PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qcom.post_boot.sh
+
+# Display
+PRODUCT_PACKAGES += \
+    libdisplayconfig \
+    libqdMetaData.system
 
 # Update engine
 PRODUCT_PACKAGES += \
@@ -83,6 +93,14 @@ PRODUCT_STATIC_BOOT_CONTROL_HAL := \
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
+
+# NN
+PRODUCT_PACKAGES += \
+    libprotobuf-cpp-full-rtti
+
+# Power
+PRODUCT_PACKAGES += \
+    power.qcom
 
 # Input
 PRODUCT_COPY_FILES += \
