@@ -121,6 +121,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     power.qcom
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
+
 # Hotword Enrollement
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:system/etc/permissions/privapp-permissions-hotword.xml
