@@ -113,6 +113,9 @@ PRODUCT_PACKAGES += \
     vendor.nxp.nxpese@1.0 \
     vendor.nxp.nxpnfc@1.0
 
+PRODUCT_BUILD_SUPER_PARTITION := false
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
 # NN
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-rtti
