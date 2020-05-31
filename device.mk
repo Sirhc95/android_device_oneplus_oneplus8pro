@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
+
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/oneplus/oneplus8pro/oneplus8pro-vendor.mk)
 
@@ -27,12 +29,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
+# define hardware platform
+PRODUCT_PLATFORM := kona
+
 # A/B
 AB_OTA_UPDATER := true
 
 AB_OTA_PARTITIONS += \
     boot \
     dtbo \
+    odm \
     product \
     system \
     vbmeta \
@@ -74,8 +80,8 @@ PRODUCT_PACKAGES += \
 
 # Common init scripts
 PRODUCT_PACKAGES += \
-    init.qcom.rc \
-    init.qcom.post_boot.sh
+    fstab.qcom \
+    init.qcom.rc
 
 # Display
 PRODUCT_PACKAGES += \
@@ -98,6 +104,9 @@ PRODUCT_STATIC_BOOT_CONTROL_HAL := \
     librecovery_updater_msm \
     libz \
 
+PRODUCT_HOST_PACKAGES += \
+    libandroidicu
+
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
@@ -119,6 +128,10 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # NN
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-rtti
+
+# fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd
 
 # Power
 PRODUCT_PACKAGES += \
