@@ -13,13 +13,6 @@
 // limitations under the License.
 
 prebuilt_etc {
-    name: "init.oneplus8pro.fingerprint.rc",
-    src: "init.oneplus8pro.fingerprint.rc",
-    sub_dir: "init",
-    vendor: true,
-}
-
-prebuilt_etc {
     name: "wlchgd.rc",
     src: "wlchgd.rc",
     sub_dir: "init",
